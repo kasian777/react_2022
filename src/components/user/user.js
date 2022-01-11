@@ -1,3 +1,4 @@
+import './user.css'
 const  User = (props)=> {
     const {id,name,surname,email,street}= props;
     return (

@@ -1,16 +1,18 @@
 import './App.css';
-import Users from "./components/user/user";
-import Post from "./components/post/posts";
-import Comment from "./components/coment/comment";
+import Users from "./components/user/users";
+import Posts from "./components/post/posts";
+import Comments from "./components/coment/comments";
+
 
 function App() {
-  return (
-    <div>
-      <Users/>
-        <Posts/>
-        <Comments/>
-    </div>
-  );
+    return (
+        <div>
+            <div className={'blok-flex'}>
+                <Users/>
+                <Posts/></div>
+            <Comments/>
+        </div>
+    );
 }
 
 export default App;

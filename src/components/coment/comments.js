@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import Comment from "../coment/comment";
 
-const Coments = () => {
+const Comments = () => {
     const [comments, setComments] = useState([]);
 
     useEffect(() => {
@@ -10,11 +10,11 @@ const Coments = () => {
             .then(value => setComments(value))
     }, [])
     return (
-        <div>
+        <div >
             {comments.map(value => <Comment key={value.id} name={value.name} email={value.email} body={value.body}/>
             )}
 
         </div>
     )
 }
-export  default Coments;
+export  default Comments;

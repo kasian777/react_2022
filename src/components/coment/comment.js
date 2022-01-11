@@ -1,7 +1,8 @@
+import './comment.css'
 const  Comment = (props)=> {
     const {id,name,email,body}= props;
     return (
-        <div>
+        <div className={'comment'}>
 
             <div>id:{id}</div>
             <div>name:{name}</div>

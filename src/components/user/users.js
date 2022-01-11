@@ -10,7 +10,7 @@ const Users = () => {
             .then(value => setUsers(value))
     }, [])
     return (
-        <div>
+        <div className={'user'}>
             {users.map(value => <User key={value.id} id={value.id} name={value.name} surname={value.surname}
                                       email={value.email} street={value.address.street}/>
             )}
@@ -18,6 +18,6 @@ const Users = () => {
         </div>
     )
 }
-export  default Users;
+export default Users;
 
 

@@ -1,8 +1,8 @@
-
+import './post.css'
 const  Post = (props)=> {
-    const {postId,id,title,body}= props;
+    const {id,title,body}= props;
     return (
-        <div>
+        <div className={'post'}>
 
             <div>id:{id}</div>
             <div>title:{title}</div>
