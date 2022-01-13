@@ -1,12 +1,12 @@
-// import 'Launches.css'
+
 
 const Launch = (props) => {
-    const {mission_name, launch_year, mission_patch } = props;
+    const {mission_name, launch_year, mission_patch_small } = props;
     return (
         <div>
             <div>mission_name:{mission_name}</div>
             <div>launch_year:{launch_year}</div>
-           <div>mission_patch:{mission_patch}<img src="link.mission_patch" alt=""/></div>
+           <img src={mission_patch_small} alt=""/>
         </div>
     )
 
