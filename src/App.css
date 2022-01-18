@@ -29,6 +29,7 @@
 }
 .wrap{
   display: flex;
+  padding: 50px;
 }
 /*@keyframes App-logo-spin {*/
 /*  from {*/
