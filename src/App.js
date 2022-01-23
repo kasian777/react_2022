@@ -1,17 +1,35 @@
+import {Form} from "./components/Form/Form";
+import {useEffect, useState} from "react";
+import {userService} from "./services/user.service";
 
-import './App.css';
 
 function App() {
-  return (
-    <div>
-        <form>
-            <div><label>Name:<input type='text' name={'name'}/></label></div>
-            <div><label>Age:<input type='text' name={'age'}/></label></div>
+    const [users, setUsers] = useState([])
+    const [filteredUsers, setsfilteredUsers] = useState([])
 
-            <button>Find</button>
-        </form>
-    </div>
-  );
+    useEffect(() => {
+        userService.getAll().then(value => {setUsers([...value])
+            setsfilteredUsers([...value])})
+    }, [])
+
+    const getFilter = (data) => {
+let filterArr = [...users]
+
+        if (data.name){
+            filterArr = filterArr.filter(user =>user.name.toLowerCase().includes(data.name.toLowerCase()))
+        }  if (data.username){
+            filterArr = filterArr.filter(user =>user.username.toLowerCase().includes(data.username.toLowerCase()))
+        }if (data.email){
+            filterArr = filterArr.filter(user =>user.email.toLowerCase().includes(data.email.toLowerCase()))
+        }
+        setsfilteredUsers(filterArr)
+    }
+    return (
+        <div>
+            <Form getFilter={getFilter}/>
+            <Users/>
+        </div>
+    );
 }
 
 export default App;
