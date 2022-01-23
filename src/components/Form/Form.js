@@ -11,9 +11,9 @@ const Form = (getFilter) => {
     return (
         <div>
             <form>
-                <label><input type="text" name={'name'} value={form.name} onChange={formHand}/></label>
-                <label><input type="text" name={'username'} value={form.username} onChange={formHand}/></label>
-                <label><input type="text" name={'email'} value={form.email} onChange={formHand}/></label>
+                <label> Name:<input type="text" name={'name'} value={form.name} onChange={formHand}/></label>
+                <label> Username:<input type="text" name={'username'} value={form.username} onChange={formHand}/></label>
+                <label>Email:<input type="text" name={'email'} value={form.email} onChange={formHand}/></label>
             </form>
         </div>
     );
